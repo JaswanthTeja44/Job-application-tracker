@@ -1,0 +1,108 @@
+:root {
+      --primary: #65dfbf;
+      --secondary: #E0E7FF;
+      --background: #F9FAFB;
+      --text: #1F2937;
+      --success: #10B981;
+      --error: #EF4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--background);
+      padding: 2rem;
+      color: var(--text);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    select {
+      padding: 0.8rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #56aad7;
+    }
+
+    .applications {
+      margin-top: 2rem;
+      max-width: 800px;
+      margin-inline: auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .application-card {
+      background-color: #fff;
+      padding: 1rem;
+      border-left: 6px solid var(--primary);
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .application-card:hover {
+      transform: scale(1.02);
+    }
+
+    .status-pending {
+      color: #f59e0b;
+    }
+
+    .status-interview {
+      color: var(--primary);
+    }
+
+    .status-offer {
+      color: var(--success);
+    }
+
+    .status-rejected {
+      color: var(--error);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111827;
+        color: #f9fafb;
+      }
+      form,
+      .application-card {
+        background-color: #1f2937;
+        border-color: #4f46e5;
+      }
+    }
